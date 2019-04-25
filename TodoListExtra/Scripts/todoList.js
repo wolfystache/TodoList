@@ -99,12 +99,12 @@ function createTask() {
 	//Add numDays property to taskElement for correct order
 	taskElement.numDays = numDays;
 
+	var child;
 	// Determine where to place task alert so as to enforce order
 	for (var i = 0; i < bodyDiv.children.length; i++) {
-		console.log(bodyDiv.children[i].numDays);
-		if (bodyDiv.children[i].numDays > numDays) {
-			
-			bodyDiv.insertBefore(taskElement, bodyDiv.children[i]);
+		child = bodyDiv.children[i];
+		if (child.numDays > numDays) {
+			bodyDiv.insertBefore(taskElement, child);
 			return false;
 		}
 	}
