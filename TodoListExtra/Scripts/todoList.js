@@ -64,7 +64,7 @@ function createTask() {
 	var numDays = Math.ceil((enteredDated.getTime() - currentDate.getTime()) / (dayMS)); 
 
 	// String containing taskElement's class
-	var classVal = "alert alert-dismissible fade show col-xl-auto col-lg-auto col-md-auto col-sm-auto ";
+	var classVal = "alert alert-dismissible fade show col-auto ";
 
 	// Switch background color on the number of days till completio.
 	if (numDays < 3) {
@@ -82,7 +82,7 @@ function createTask() {
 
 	// 'x' button for task dismissal 
 	var taskButton = document.createElement("button"); 
-	taskElement.setAttribute("style", "margin-right: 10px"); 
+	taskElement.setAttribute("style", "margin-right: 20px; font-weight: 600"); 
 
 	taskButton.setAttribute("type", "button");
 	taskButton.setAttribute("class", "close"); 
